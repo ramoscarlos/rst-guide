@@ -1,0 +1,164 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Definición de constantes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\margenIzquierdo}{0.625in} % Margen a la izquierda del documento.
+\newcommand{\margenDerecho}{0.500in}   % Margen a la derecha del documento.
+%%%%% Definición de colores %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{ColorBase}{RGB}{103, 56, 136} % Eminence, de https://www.schemecolor.com/twilight-sparkle-color-palette.php
+\colorlet{ColorTitulos}{ColorBase!80!Black}
+\colorlet{Texto}{Black!95}
+% Colores de la portada.
+\colorlet{FondoPortada}{ColorBase!40!Black}
+\colorlet{TextoPortada}{White}
+\colorlet{FondoCodigoPortada}{ColorBase!15!Black}
+% Colores del título de cada capítulo.
+\colorlet{FondoCapitulo}{FondoPortada}
+\colorlet{TextoCapitulo}{TextoPortada}
+% Colores de encabezado y pie de página.
+\colorlet{PiePaginaNumeroPagina}{Black!85}
+\colorlet{PiePaginaCapitulo}{Black!70}
+% Color de los enlaces.
+\colorlet{Enlaces}{ColorBase}
+% Color de líneas de separación de código.
+\colorlet{ColorLineaCodigo}{ColorBase!50}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Configuración del paquete fancyhdr %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\headrule}{} % Remueve línea horizontal propia de fancyhdr.
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\newcommand{\configuracionPie}{
+    \fancyhf{} % Limpia encabezado y pie de página.
+    \fancyfoot[RO]{ % Para el pie de página de una página impar, a la derecha.
+	    \footnotesize % Todo el pie estará en este tamaño.
+	    \textcolor{PiePaginaCapitulo}{ % Color para nombre de capítulo.
+	        \nouppercase\leftmark % Imprimir el nombre del capítulo.
+	    } % Fin de cambio de color
+	    \kern5pt % Dejar un espacio de 5pt respecto a lo que siga.
+	    \textcolor{PiePaginaNumeroPagina}{ % Color para número de página.
+	        \textbf{\thepage} % Imprimir el número de página.
+	    } % Fin del otro cambio de color.
+	}
+	\fancyfoot[LE]{ % Para el pie de página de un página par, a la izquierda.
+	    \footnotesize % Todo el pie estará en este tamaño.
+	    \textcolor{PiePaginaNumeroPagina}{
+	        \textbf{\thepage} % Imprime el número de página.
+	    }
+	    \ifnum\value{chapter}>0 % \ifnum evita "Capítulo 0" en el índice.
+	        \kern5pt % Espacio entre número de página y otro texto.
+	        \textcolor{PiePaginaCapitulo}{
+	            \chaptername~\thechapter % Imprime "Capítulo" y número.
+	        }
+	    \fi % Fin del \ifnum.
+	}
+}
+\fancypagestyle{plain}{\configuracionPie}
+\fancypagestyle{normal}{\configuracionPie}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Configuración del paquete fncychap %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand\DOCH{ % DOCH aplica para los capitulos con número y nombre.
+\begin{adjustwidth}{-\margenIzquierdo}{-\margenDerecho}
+    \nointerlineskip%
+    \vspace{-1.500in}%
+    \settowidth{\py}{\CNoV\thechapter}%
+    \addtolength{\py}{\margenDerecho}%
+    \addtolength{\py}{0.075in}%
+    \fboxsep=0pt%
+    % Caja de color del número de capítulo, alto de 1.75in x ancho del 100.01%.
+    \colorbox{FondoCapitulo}{\rule{0pt}{1.500in}\parbox[b]{1.01\paperwidth}{\hfill}}%
+    % Se eleva 20pt verticalmente para escribir el número de capítulo.
+    \kern-\py\raise20pt%
+    \hbox{\color{TextoCapitulo}\CNoV\thechapter}\\%
+\end{adjustwidth}
+}
+\renewcommand\DOTI[1]{ % DOTI es para \chapter
+\begin{adjustwidth}{-\margenIzquierdo}{0in}
+    \nointerlineskip%
+    \fboxsep=\myhi%
+    \vskip-0.20in%
+    \colorbox{FondoCapitulo}{\parbox[t]{\paperwidth}{\CTV\FmTi{\color{TextoCapitulo}#1}\kern\margenDerecho\kern0.055in}}\par\nobreak%
+    \vskip-1.75ex%
+    \colorbox{FondoCapitulo}{\rule{0pt}{10pt}\parbox[b]{\paperwidth}{\hfill}}%
+    \vskip 30pt%
+\end{adjustwidth}
+}
+\renewcommand\DOTIS[1]{ % DOTIS aplica para los capítulos sin número y sin nombre (\chapter*).
+\begin{adjustwidth}{-\margenIzquierdo}{0in}
+    \vspace{-1.85in}
+    \fboxsep=0pt
+    \colorbox{FondoCapitulo}{\rule{0pt}{120pt}\parbox[b]{1.01\paperwidth}{\hfill}}\\%
+    \nointerlineskip%
+    \fboxsep=\myhi%`
+    \vskip-1ex%
+    \colorbox{FondoCapitulo}{\parbox[t]{\paperwidth}{\CTV\FmTi{\color{TextoCapitulo}#1}\kern\margenDerecho}}\par\nobreak%
+    \vskip-1ex%
+    \colorbox{FondoCapitulo}{\rule{0pt}{10pt}\parbox[b]{\paperwidth}{\hfill}}%
+    \vskip 30pt%
+\end{adjustwidth}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Ajustes de titlesec %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Esta línea se activa en caso de no querer números en las secciones (usar en conjunto con secnumdepth)
+\titleformat{\section}{\normalfont\bfseries\Large\color{ColorTitulos}}{\thesection}{5pt}{}{}
+% Modifica el espacio entre el título y el texto que tiene debajo.
+\titlespacing{\section}{0pt}{*3}{*1}
+
+% Se aplica una lógica similar para la subsección.
+\titleformat*{\subsection}{\normalfont\bfseries\large\color{ColorTitulos}}
+\titlespacing{\subsection}{0pt}{*2}{*1}
+
+\titlespacing{\subsubsection}{0pt}{*1.5}{*1}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Otras configuraciones que afectan el comportamiento de LaTeX %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Ajuste del interlineado (requiere setspace).
+\setstretch{1.1875}
+
+% Elimina el espacio entre elementos de una lista (requiere enumitem).
+\setlist{noitemsep}
+
+% Longitud del sangrado de párrafos.
+\setlength\parindent{0.250in}
+
+% Configuración del enlaces (requiere hyperref).
+\hypersetup{colorlinks, breaklinks, urlcolor=Enlaces, citecolor=Enlaces, linkcolor=Enlaces}
+
+% Nombre de tabla de contenido.
+\addto\captionsspanish{\renewcommand{\contentsname}{Contenido}}
+
+% No "justificar" verticalmente (que LaTeX no busque que la última línea de todas las páginas quede donde mismo).
+\raggedbottom
+
+% Valores que afectan a cómo LaTeX maneja las líneas huérfanas (líneas que alcanzan a cruzar a otras páginas, solas).
+\widowpenalty=10000
+\clubpenalty=10000
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Redefinición de elementos de Sphinx %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\BeforeBeginEnvironment{sphinxVerbatim}{%
+    \vspace{-4mm}%
+    \noindent{\textcolor{ColorLineaCodigo}{\rule{\linewidth}{0.4pt}}}%
+    \vspace{-3.75mm}%
+}
+\AfterEndEnvironment{sphinxVerbatim}{%
+    \vspace*{-7mm}%
+    \noindent{\textcolor{ColorLineaCodigo}{\rule{\linewidth}{0.4pt}}}%
+    \vspace*{-1.40mm}%
+}

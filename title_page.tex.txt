@@ -1,0 +1,22 @@
+% Title and author page
+{
+\newpage % New page
+\thispagestyle{empty} % Remove page number
+
+\fontfamily{cmr}\selectfont
+
+\centering
+
+\vspace*{3cm}
+
+\noindent\scalebox{2.5}{reStructuredText Guide}\\
+
+\vspace*{6cm}
+
+\scalebox{1.10}{by Carlos Ramos}
+
+\vspace*{3cm}
+
+\includegraphics[width=2.5cm]{LeanPub.pdf}
+
+}

@@ -1,0 +1,21 @@
+\newpage
+
+\vspace*{0.5in} % Vertical space prior to dedication
+\begin{flushright} % Right align
+\textit{
+	To Alberto, Lorenza, and Miriam\\
+	My family provided by God\\
+	Those who guided my first steps
+}
+
+\vspace{0.5in}
+\textit{
+	And to Ixchel\\
+	My chosen family\\
+	The woman who walks besides me
+}
+\end{flushright}
+
+\clearpage
+
+\null\newpage

@@ -1,0 +1,19 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+		},
+		{
+			"path": "C:\\Users\\ramos\\OneDrive\\2B\\live-wallpapers"
+		},
+	],
+	"build_systems":
+	[
+		{
+			"name": "Build the book",
+			"cmd": "make.bat html",
+			"working_dir": "$project_path",
+		}
+	],
+}

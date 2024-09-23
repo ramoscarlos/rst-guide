@@ -1,0 +1,48 @@
+% Copyright
+{
+\newpage
+\thispagestyle{empty}
+
+\vspace*{1cm}
+
+\fontsize{16pt}{0pt}\selectfont
+\noindent\textbf{reStructuredText Guide}\\
+\fontsize{14pt}{0pt}\selectfont\vspace{4pt}
+\newline\emph{Carlos Alberto Ramos López}\\
+
+\vspace*{2cm}
+\fontsize{10pt}{0pt}\selectfont
+
+\noindent This book is for sale on\\
+\vspace{2pt}\newline\url{https://leanpub.com/rst-guide/}
+
+\vspace*{2cm}
+
+\noindent This version was published on \today.
+
+\vspace*{1cm}
+
+\noindent\begin{minipage}[t]{2cm}
+\includegraphics[width=0.98\linewidth]{LeanPub.png}
+\end{minipage}
+\begin{minipage}[t]{\linewidth-2cm}
+\vspace{-41pt}
+This book was published on \href{https://leanpub.com/}{LeanPub}. While this book was not generated using the Leanpub markup language, I support this platform.
+\end{minipage}
+
+\vspace*{1cm}
+
+\noindent\begin{minipage}[t]{2cm}
+\includegraphics[width=0.98\linewidth]{CC-BY-NC-SA.png}
+\end{minipage}
+\begin{minipage}[t]{\linewidth-2cm}
+\vspace{-19.5pt}
+This book is licensed under \href{https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es}{Creative Commons BY-NC-SA 4.0}, which means you can share and redistribute provided you:
+\begin{itemize}[nosep]
+    \item Credit the author with a link to \url{https://ramoscarlos.com}.
+    \item Do not sell this work (you can share for free, not for a profit).
+    \item Share this work under the same license.
+\end{itemize}
+\end{minipage}
+
+}
