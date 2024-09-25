@@ -1,3 +1,13 @@
+reStructuredText Guide
+======================
+
+.. raw:: html
+
+   Welcome to the reStructuredText Guide in its online version!
+
+   <br>
+   <br>
+   <br>
 
 .. toctree::
    :maxdepth: 2
