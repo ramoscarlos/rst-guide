@@ -445,7 +445,7 @@ Admonitions are special messages. You can picture them as colored boxes: red for
 
 The admonition is a set of directives. Yes, you have the generic ``admonition``, but you have several others at your disposal: ``attention``, ``caution``, ``danger``, ``error``, ``hint``, ``important``, ``note``, ``tip``, and ``warning``.
 
-Depending on the HTML theme, each of the admonitions has a different style. The syntax is:, y se mandan llamar de la siguiente forma:
+Depending on the HTML theme, each of the admonitions has a different style. The syntax is:
 
 .. code-block:: rst
 
