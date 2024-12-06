@@ -507,7 +507,7 @@ Each admonition type comes with a title, except the generic one. As it doesn't c
 
         Content for type ``admonition``.
 
-Lo que da como resultado:
+Which yields:
 
 .. admonition:: Admonition title
 
