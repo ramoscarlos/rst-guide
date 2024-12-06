@@ -106,15 +106,17 @@ Figures
 -------
 
 
-A figure is an image with a legend. Its syntax is similar to the ``image`` directive, even the options are the same. The difference? ``figure`` uses the content of the directive as the legend to the image. The syntax is:
+A figure is an image with a caption, and an optional legend. Its syntax is similar to the ``image`` directive, even the options are the same. The difference? ``figure`` uses the content of the directive as the caption and legent to the image. The syntax is:
 
 .. code-block:: rst
 
     .. figure:: img/image-name.png
 
-        Legend.
+        Caption (for a title)
 
-You can take one of the examples above and add the legend on the directive content:
+        Legend (for a longer description, typically underneath the image and caption)
+
+You can take one of the examples above and add the caption on the directive content:
 
 .. code-block:: rst
 
@@ -124,7 +126,7 @@ You can take one of the examples above and add the legend on the directive conte
 
         ramoscarlos.com logo (with legend)
 
-That is all that we need to have an image with a legend below:
+That is all that we need to have an image with a caption below:
 
 .. figure:: http://ramoscarlos.com/logo.png
     :width: 60%
@@ -177,7 +179,7 @@ And the code for the directive example is:
 
 
 
-Opción ``number-lines``
+``number-lines`` option
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 
