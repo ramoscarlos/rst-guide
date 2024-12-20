@@ -56,8 +56,8 @@ latex_elements = {
     ''',
     'passoptionstopackages': r'''
     \PassOptionsToPackage{
-        paperwidth=6in,
-        paperheight=9in,
+        paperwidth=7in,
+        paperheight=9.25in,
     }{geometry}
     \PassOptionsToPackage{svgnames}{xcolor}
     ''',
@@ -73,6 +73,7 @@ latex_elements = {
         \usepackage{calc}                           % To use calculated expressions
         \usepackage{etoolbox}                       % To add content before or after a given environment.
         \usepackage[labelformat=empty]{caption}     % Prevents the "Figure #" text.
+        \usepackage{pdfpages}                       % Include image as page
     ''',
     'maketitle': r'''
         \input{cover.tex.txt}
@@ -92,5 +93,6 @@ latex_additional_files = [
     'img/LeanPub.pdf',
     'img/LeanPub.png',
     'img/LeanPubW.png',
+    'img/rst-cover.png',
     'img/CC-BY-NC-SA.png'
 ]
