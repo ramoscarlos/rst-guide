@@ -3,7 +3,7 @@
 
 # reStructuredText Guide
 
-A reference book for the reStructuredText mardup language.
+A reference book for the reStructuredText markup language.
 
 Copyright © 2024 [Carlos Ramos](http://ramoscarlos.com).
 
