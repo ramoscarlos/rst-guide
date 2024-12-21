@@ -16,7 +16,7 @@ Copyright © 2024 [Carlos Ramos](http://ramoscarlos.com).
 
 This book is a guide for those who want to start using reStructuredText on their documentation tasks, and aspires to be as influential as [The Markdown Guide](https://leanpub.com/themarkdownguide) is for the Markdown language.
 
-This repository has all the files needed to generate the HTML documentation and the PDF.The book may be acquired on [Leanpub](https://leanpub.com/rst-guide) by paying what you feel like it for it (even free!).
+This repository has all the files needed to generate the HTML documentation and the PDF.The book may be acquired on [Leanpub](https://leanpub.com/rst-guide) by paying what you want for it (even free!).
 
 
 
