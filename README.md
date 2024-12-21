@@ -7,7 +7,7 @@ A reference book for the reStructuredText mardup language.
 
 Copyright © 2024 [Carlos Ramos](http://ramoscarlos.com).
 
-<a href="https://leanpub.com/rst-guide" target="_blank"><img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1727067850i/219457574.jpg" height="200px"></a>
+<a href="https://leanpub.com/rst-guide" target="_blank"><img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1734662352i/222801089.jpg" height="200px"></a>
 
 
 
