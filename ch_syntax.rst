@@ -315,7 +315,7 @@ Comments
 
 
 
-To write comments within the document, start a new line with two colons and a space. What you write after that, will not show up in the output. For example:
+To write comments within the document, start a new line with two dots and a space. What you write after that, will not show up in the output. For example:
 
 .. This line is a comment and will not be shown.
 
@@ -445,7 +445,7 @@ The code in reStructuredText was:
 
           - What is supposed to be the second level.
 
-Depending on the theme, the blockquote may not be evident. To clarify this poing, I include the HTML generated code:
+Depending on the theme, the blockquote may not be evident. To clarify this point, I include the HTML generated code:
 
 .. code-block:: html
 
@@ -1039,7 +1039,7 @@ If this is too complex for you, there is a silver lining in all of this: what I 
 
 The "bad" way of doing tables is simpler than what we saw above. Still a pain to write, but simpler. The drawback? No multirow is allowed, so this method will be out of the table when multirow capabilities are needed.
 
-Having said that, here is tha example:
+Having said that, here is that example:
 
 .. code-block:: rst
 

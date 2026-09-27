@@ -55,7 +55,7 @@ As this may not be what is required for the image, we have *options* to modify *
 
 Let's first test the ``:alt:`` option with a non-existant image:
 
-.. image:: http://this-image.shall/not-exits.gif
+.. image:: http://this-image.shall/not-exist.gif
    :alt: This text should be displayed instead
 
 .. raw:: latex
@@ -68,7 +68,7 @@ And that magic was done with the code:
 
 .. code-block:: rst
 
-    .. image:: http://this-image.shall/not-exits.gif
+    .. image:: http://this-image.shall/not-exist.gif
         :alt: This text should be displayed instead
 
 To solve the size issue, we can use the option ``width``, with a percentage value of 60%. As align is not used, image will be left-aligned:
@@ -533,7 +533,7 @@ Which gets displayed as:
 
     \frac{1}{2} + \frac{1}{4} + \ldots = \sum_{n=1}^{\infty} \left(\frac{1}{2}\right)^n = 1
 
-If you do not understand LaTeX, `I wrote a book about it`_ (on Spanish, though).
+If you do not understand LaTeX, `I wrote a book about it`_ (in Spanish, though).
 
 
 
